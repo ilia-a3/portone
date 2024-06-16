@@ -1,7 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap");
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -39,4 +40,25 @@
 .font-inc {
   font-family: "Inconsolata", monospace;
   letter-spacing: 0.25rem;
+}
+.font-jb {
+  letter-spacing: 0.25rem;
+  font-family: "JetBrains Mono", monospace;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@media screen and (max-width: 540px) {
+  .max-first {
+    display: none;
+  }
+}
+
+.underlinemaybe {
+  background: transparent;
+  border-radius: 10px;
+  height: 10px;
+  width: 55px;
+  box-shadow: 0 20px 0 0 #000;
 }
