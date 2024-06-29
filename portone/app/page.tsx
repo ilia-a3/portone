@@ -1,10 +1,13 @@
+"use client";
 import Image from "next/image";
-const items: string[] = [
-  "Programming",
-  "Engineering",
-  "Web Dev",
-  "Computing",
-  "Something",
+import Link from "next/link";
+import { useState } from "react";
+const items: { title: string; link: string }[] = [
+  { title: "Programming", link: "/interests/programming" },
+  { title: "Engineering", link: "/interests/engineering" },
+  { title: "Web Dev", link: "/interests/web-dev" },
+  { title: "Computing", link: "/interests/computing" },
+  { title: "Something", link: "/interests/something" },
 ];
 const details: { title: string; desc: string }[] = [
   {
@@ -25,19 +28,34 @@ const details: { title: string; desc: string }[] = [
   },
 ];
 export default function Home() {
+  const [popup, setPopup] = useState(true);
+  const closePopup = () => {
+    setPopup(false);
+  };
   return (
     <>
-      <section className="bg-gr-front-two h-[42rem] sm:h-[30rem]">
+      {popup && (
+        <div className="fixed w-100 h-100 bg-yellow-300 top-10 p-10 left-50% -translate-x-50">
+          <p>
+            Hi, this website is currently still being worked on and in
+            development status. Just bear in mind some features may not work!
+          </p>
+          <button onClick={closePopup} className="mt-5 text-white p-5 bg-black">
+            Close
+          </button>
+        </div>
+      )}
+      <section className="mt-10 bg-gr-front-two h-[42rem] sm:h-[30rem]">
         <div className="flex md:flex-row w-100% md:max-w-[40rem] flex-col ml-auto mr-auto">
           <img
             src="/selfie.jpg"
             alt="me"
-            className="hidden md:block mr-5"
+            className="hidden md:block mr-5 rounded-lg"
             width="200px"
           />
           <div className="p-10">
             <h1 className="text-5xl">Ilia A</h1>
-            <p>
+            <p className="mt-6">
               I am a passionate worker with an various interests. I enjoy
               learning new technologies as much as I do developing them with
               creativity and my technical abilities with enough self motivation
@@ -68,7 +86,7 @@ export default function Home() {
           {/* <img src="/background-front-1.svg" /> */}
           <div className="bg-black lg:w-100% lg:h-100%"></div>
         </div>
-        <div className="w-100% lg:w-50% h-auto sm:pr-5">
+        <div className="w-100% ml-auto mr-auto lg:w-50% h-auto sm:pr-5 max-w-[55rem]">
           <div className="p-10 text-left">
             <h2 className="text-5xl mb-2">
               Fields of
@@ -80,20 +98,19 @@ export default function Home() {
           </div>
           <ul className="text-right w-100% font-jb" dir="rtl">
             {items.map((item) => (
-              <button
-                key={item}
-                className="flex flex-row m-5 w-90% sm:m-10 pr-4 p-10 sm:pr-10 bg-gray-300 bg-opacity-50 sm:w-110 YES  border-neutral-400 border-2 text-neutral-600 hover:text-white hover:shadow-[inset_-36rem_0_0_0] hover:shadow-ayellowlighter duration-[400ms,700ms] transition-[color,box-shadow]"
-              >
-                <span className="max-first">
-                  <img
-                    src="/bulletin1.svg"
-                    alt="bulletin for list"
-                    width="50"
-                    className="fill-yellow-400"
-                  />
-                </span>
-                <span className="text-4xl mr-5">{item}</span>
-              </button>
+              <Link key={item.title} href={item.link}>
+                <button className="flex flex-row m-5 w-90% sm:m-10 pr-4 p-10 sm:pr-10 bg-gray-300 bg-opacity-50 sm:w-110 YES  border-neutral-400 border-2 text-neutral-600 hover:text-white hover:shadow-[inset_-36rem_0_0_0] hover:shadow-ayellowlighter duration-[400ms,700ms] transition-[color,box-shadow]">
+                  <span className="max-first">
+                    <img
+                      src="/bulletin1.svg"
+                      alt="bulletin for list"
+                      width="50"
+                      className="fill-yellow-400"
+                    />
+                  </span>
+                  <span className="text-4xl mr-5">{item.title}</span>
+                </button>
+              </Link>
             ))}
           </ul>
         </div>

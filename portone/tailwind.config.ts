@@ -29,6 +29,7 @@ const config: Config = {
         ayellowdark: "#ab7315",
       },
       spacing: {
+        "50": "30rem",
         "110": "30rem",
         "200": "50rem",
         "front-first-h": "70rem",
