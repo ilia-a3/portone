@@ -51,7 +51,7 @@ export default function Navbar() {
         {nav && (
           <>
             {items.map((item) => (
-              <Link href={item.uri}>
+              <Link key={item.name} href={item.uri}>
                 <button
                   key={item.uri}
                   className="w-full bg-ayellow rounded-md text-abluedark hover:-translate-y-2 transition-all duration-200 active:translate-y-4 hover:bg-ayellowdark"

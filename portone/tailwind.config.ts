@@ -15,9 +15,13 @@ const config: Config = {
         front: "url('/front-maybe.bmp')",
         "gr-front-one":
           "linear-gradient(0deg, rgba(255,255,255,0) 0%, rgba(200,225,251,1) 10%, rgba(221,237,253,1) 100%)",
+        "gr-front-two":
+          "linear-gradient(0deg, rgba(221,237,253,1) 0%, rgba(255,228,211,1) 85%, rgba(255,255,255,1) 100%)",
+        coolgrad: "linear-gradient(to right, #f0cb28a1, #f0502888)",
       },
       colors: {
         abluelight: "#2a4a6b",
+        abluelighttext: "#368eeb",
         abluedark: "#031d38",
         ayellow: "#d49428",
         ayellowl: "#d4a928",
