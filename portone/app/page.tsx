@@ -27,7 +27,7 @@ const details: { title: string; desc: string }[] = [
 export default function Home() {
   return (
     <>
-      <section className="bg-gr-front-two h-[30rem] flex md:flex-row flex-col">
+      <section className="bg-gr-front-two h-[40rem] sm:h-[30rem] flex md:flex-row flex-col">
         <div className="p-10 w-100% md:max-w-110">
           <h1 className="text-5xl">Ilia A</h1>
           <p>

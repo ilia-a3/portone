@@ -44,9 +44,34 @@ export default function Navbar() {
       >
         <button
           onClick={toggle}
-          className="md:hidden w-fit mr-auto ml-auto bg-ayellowdark text-abluedark p-5 rounded-md hover:-translate-y-2 transition-all duration-200 active:translate-y-4"
+          className="md:hidden w-fit mr-auto ml-auto bg-ayellowdark text-abluedark p-2 rounded-md hover:-translate-y-2 transition-all duration-200 active:translate-y-4"
         >
-          more
+          <svg
+            width="50px"
+            height="50px"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4 18H10"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 12L16 12"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+            <path
+              d="M4 6L20 6"
+              stroke="#000000"
+              stroke-width="2"
+              stroke-linecap="round"
+            />
+          </svg>
         </button>
         {nav && (
           <>
