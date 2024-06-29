@@ -27,21 +27,29 @@ const details: { title: string; desc: string }[] = [
 export default function Home() {
   return (
     <>
-      <section className="bg-gr-front-two h-[40rem] sm:h-[30rem] flex md:flex-row flex-col">
-        <div className="p-10 w-100% md:max-w-110">
-          <h1 className="text-5xl">Ilia A</h1>
-          <p>
-            I am a passionate worker with an various interests. I enjoy learning
-            new technologies as much as I do developing them with creativity and
-            my technical abilities with enough self motivation to achieve my
-            goals.
-            {/* I have worked making websites for small companies
+      <section className="bg-gr-front-two h-[42rem] sm:h-[30rem]">
+        <div className="flex md:flex-row w-100% md:max-w-[40rem] flex-col ml-auto mr-auto">
+          <img
+            src="/selfie.jpg"
+            alt="me"
+            className="hidden md:block mr-5"
+            width="200px"
+          />
+          <div className="p-10">
+            <h1 className="text-5xl">Ilia A</h1>
+            <p>
+              I am a passionate worker with an various interests. I enjoy
+              learning new technologies as much as I do developing them with
+              creativity and my technical abilities with enough self motivation
+              to achieve my goals.
+              {/* I have worked making websites for small companies
             and offered internships for startups. Learning from online sites
             such as Udemy and over 3 years experiecne, I have learnt all the
             skills needed to develop the next full stack application. */}
-          </p>
+            </p>
+          </div>
         </div>
-        <div className="p-10 w-100% md:max-w-200 flex md:flex-col flex-row justify-between flex-wrap">
+        <div className="mr-auto p-10 w-100% md:max-w-[60rem] flex flex-row justify-between flex-wrap ml-auto">
           {details.map((d) => (
             <div
               key={d.title}
