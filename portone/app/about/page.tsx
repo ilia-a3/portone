@@ -21,7 +21,10 @@ export default function AboutPage() {
       </h1>
       <p></p>
       {sections.map((s) => (
-        <div className="p-4 text-center mt-8 max-w-200 mr-auto ml-auto">
+        <div
+          key={s.heading}
+          className="p-4 text-center mt-8 max-w-200 mr-auto ml-auto"
+        >
           <h2 className="text-2xl text-[#af7267]">{s.heading}</h2>
           <p className="text-xl mt-5 text-[#5b6772]">{s.txt}</p>
         </div>
