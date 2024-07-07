@@ -45,7 +45,7 @@ export default function Home() {
           </button>
         </div>
       )}
-      <section className="mt-10 bg-gr-front-two h-[42rem] sm:h-[30rem]">
+      <section className="mt-10 bg-gr-front-two  min-[420]:h-[42rem] sm:h-[30rem]">
         <div className="flex md:flex-row w-100% md:max-w-[40rem] flex-col ml-auto mr-auto">
           <img
             src="/selfie.jpg"
@@ -71,7 +71,8 @@ export default function Home() {
           {details.map((d) => (
             <div
               key={d.title}
-              className="mb-10 bg-ayellowlighter p-4 rounded-md bg-opacity-20 max-w-52"
+              className="
+              mb-10 bg-ayellowlighter p-4 rounded-md bg-opacity-20 max-w-52 shadow-md"
             >
               <h3 className="text-2xl">
                 <b>{d.title}</b>
@@ -90,7 +91,7 @@ export default function Home() {
           <div className="p-10 text-left">
             <h2 className="text-5xl mb-2">
               Fields of
-              <span className="text-abluelighttext underlinemaybe ml-5 pl-2 pr-2 cool-gradient">
+              <span className="underlinemaybe text-abluelighttext ml-5 pl-2 pr-2 cool-gradient">
                 interest
               </span>
             </h2>

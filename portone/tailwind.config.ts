@@ -18,6 +18,8 @@ const config: Config = {
         "gr-front-two":
           "linear-gradient(0deg, rgba(221,237,253,1) 0%, rgba(255,228,211,1) 85%, rgba(255,255,255,1) 100%)",
         coolgrad: "linear-gradient(to right, #f0cb28a1, #f0502888)",
+        innerinterest:
+          "radial-gradient(circle, rgba(232,190,105,1) 0%, rgba(55,65,81,1) 100%)",
       },
       colors: {
         abluelight: "#2a4a6b",
@@ -28,6 +30,7 @@ const config: Config = {
         ayellowlighter: "#e3c15d",
         ayellowdark: "#ab7315",
       },
+
       spacing: {
         "50": "30rem",
         "110": "30rem",
