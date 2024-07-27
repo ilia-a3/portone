@@ -63,7 +63,7 @@ export default function Interest({ params }: { params: { int: string } }) {
       ) : (
         <>
           <h1 className="center text-5xl">
-            ERROR 404 - Sorry this page couldn't be found
+            ERROR 404 - Sorry this page couldn&apos;t be found
           </h1>
           <Link className="text-white bg-black p-2" href="/">
             Return Home
