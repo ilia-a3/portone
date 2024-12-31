@@ -1,3 +1,4 @@
+import Heading from "@/app/Heading";
 import Link from "next/link";
 
 let yes: {
@@ -53,11 +54,7 @@ export default function Interest({ params }: { params: { int: string } }) {
       {content != null ? (
         <div className="">
           <section>
-            <h1 className=" font-playright text-4xl text-center pt-10 pb-10 text-gray-700 bg-gray-300 ">
-              <i className="unerlineinterest ml-5 pl-1 pr-1 cool-gradient">
-                {content.title}
-              </i>
-            </h1>
+            <Heading title={content.title} />
           </section>
         </div>
       ) : (

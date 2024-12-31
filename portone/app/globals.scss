@@ -98,3 +98,12 @@
   animation: underlinemove 1s ease-in-out 1s;
   transition: background-size 0.5s ease;
 }
+
+.backdrop-mini {
+  background: rgb(188, 187, 196);
+  background: linear-gradient(
+    180deg,
+    rgba(188, 187, 196, 0.49622166246851385) 0%,
+    rgba(5, 5, 6, 1) 100%
+  );
+}
